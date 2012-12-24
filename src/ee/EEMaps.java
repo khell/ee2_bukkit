@@ -41,8 +41,8 @@
 /*      */ 
 /*      */   public static void addNameToBlacklist(String var0)
 /*      */   {
-/*   38 */     for (int var1 = 0; modBlacklist.get(Integer.valueOf(var1)) != null; var1++);
-/*   43 */     modBlacklist.put(Integer.valueOf(var1), var0);
+/*   38 */     for (int var1 = 0; modBlacklist.get(Integer.valueOf(var1)) != null; var1++)
+/*   43 */     		modBlacklist.put(Integer.valueOf(var1), var0);
 /*      */   }
 /*      */ 
 /*      */   public static boolean isLeaf(int var0)
@@ -52,7 +52,7 @@
 /*      */ 
 /*      */   public static void addLeafBlock(int var0)
 /*      */   {
-/*   55 */     for (int var1 = 0; leafBlockRegistry.get(Integer.valueOf(var1)) != null; var1++);
+/*   55 */     for (int var1 = 0; leafBlockRegistry.get(Integer.valueOf(var1)) != null; var1++)
 /*   60 */     leafBlockRegistry.put(Integer.valueOf(var1), Integer.valueOf(var0));
 /*      */   }
 /*      */ 
@@ -63,7 +63,7 @@
 /*      */ 
 /*      */   public static void addWoodBlock(int var0)
 /*      */   {
-/*   72 */     for (int var1 = 0; woodBlockRegistry.get(Integer.valueOf(var1)) != null; var1++);
+/*   72 */     for (int var1 = 0; woodBlockRegistry.get(Integer.valueOf(var1)) != null; var1++)
 /*   77 */     woodBlockRegistry.put(Integer.valueOf(var1), Integer.valueOf(var0));
 /*      */   }
 /*      */ 
@@ -189,7 +189,7 @@
 /*      */ 
 /*      */   public static void addChargedItem(int var0)
 /*      */   {
-/*  204 */     for (int var1 = 0; chargedItems.get(Integer.valueOf(var1)) != null; var1++);
+/*  204 */     for (int var1 = 0; chargedItems.get(Integer.valueOf(var1)) != null; var1++)
 /*  209 */     chargedItems.put(Integer.valueOf(var1), Integer.valueOf(var0));
 /*      */   }
 /*      */ 
@@ -228,7 +228,7 @@
 /*      */ 
 /*      */   public static void addModItem(int var0)
 /*      */   {
-/*  249 */     for (int var1 = 0; modItems.get(Integer.valueOf(var1)) != null; var1++);
+/*  249 */     for (int var1 = 0; modItems.get(Integer.valueOf(var1)) != null; var1++)
 /*  254 */     modItems.put(Integer.valueOf(var1), Integer.valueOf(var0));
 /*      */   }
 /*      */ 
@@ -266,9 +266,10 @@
 /*  288 */       var2 = (HashMap)fuelItemRegistry.get(Integer.valueOf(var0));
 /*      */     }
 /*      */ 
-/*  293 */     for (int var3 = 0; var2.get(Integer.valueOf(var3)) != null; var3++);
+/*  293 */     for (int var3 = 0; var2.get(Integer.valueOf(var3)) != null; var3++) {
 /*  298 */     var2.put(Integer.valueOf(var3), Integer.valueOf(var1));
 /*  299 */     fuelItemRegistry.put(Integer.valueOf(var0), var2);
+}
 /*      */   }
 /*      */ 
 /*      */   public static boolean isOreBlock(int var0)
@@ -278,7 +279,7 @@
 /*      */ 
 /*      */   public static void addOreBlock(int var0)
 /*      */   {
-/*  311 */     for (int var1 = 0; oreBlockRegistry.get(Integer.valueOf(var1)) != null; var1++);
+/*  311 */     for (int var1 = 0; oreBlockRegistry.get(Integer.valueOf(var1)) != null; var1++)
 /*  316 */     oreBlockRegistry.put(Integer.valueOf(var1), Integer.valueOf(var0));
 /*      */   }
 /*      */ 
@@ -302,8 +303,32 @@
 /*  336 */     addEMC(var0, 0, var1);
 /*      */   }
 /*      */ 
+			public static int canAddEMC(int itemId, int itemSubId) {
+				String banned[] = EEBase.props.func_26614_getString("NoEMC").split(",");
+				for(int i = 0; i < banned.length; i++) {
+					String ids[] = banned[i].split(":");
+					if(itemId == Integer.parseInt(ids[0])) {
+						if(ids.length == 1 || Integer.parseInt(ids[1]) == itemSubId) //ban all items with itemId if no sub id specified, or ban if matches
+							return 0;
+					}
+				}
+				return 1;
+			}
+			
 /*      */   public static void addEMC(int var0, int var1, int var2)
 /*      */   {
+			   //Note: Item subids are not correctly used by Dark Matter Relays and Transmutation Tablets.
+			   //These will treat the item as the main item of subid 0, and so EMC values will not change unless the main item is also blocked.
+			   //Example: Bone Meal (351:15) if EMC blocked will still be condensable in DMR or TT as long as 351 (351:0) remains unblocked. The methods for
+			   //DMR and TT only check the main item id EMC value, and assumes they are the same. The Energy Condenser does check ids properly however, and
+	           //this removes the automation aspect of EMC farming at least.
+
+			   //TODO: Fix DMR and TTs to check the sub id too.
+			   if (canAddEMC(var0, var1) == 0) {
+				   System.out.println("ALERT: Skipped addEMC call for item id " + var0 + ":" + var1 + "; item is EMC blocked.");
+				   return;
+			   }
+			   
 /*  341 */     if (var2 == 0)
 /*      */     {
 /*  343 */       System.out.println("Error: Alchemical Value of 0 being added to hashmap for item index " + var0 + " of meta " + var1);
@@ -337,7 +362,7 @@
 /*      */ 
 /*      */   public static void addFlyingItem(int var0)
 /*      */   {
-/*  376 */     for (int var1 = 0; flyingItems.get(Integer.valueOf(var1)) != null; var1++);
+/*  376 */     for (int var1 = 0; flyingItems.get(Integer.valueOf(var1)) != null; var1++)
 /*  381 */     flyingItems.put(Integer.valueOf(var1), Integer.valueOf(var0));
 /*      */   }
 /*      */ 
@@ -348,7 +373,7 @@
 /*      */ 
 /*      */   public static void addFireImmuneItem(int var0)
 /*      */   {
-/*  393 */     for (int var1 = 0; fireImmuneItems.get(Integer.valueOf(var1)) != null; var1++);
+/*  393 */     for (int var1 = 0; fireImmuneItems.get(Integer.valueOf(var1)) != null; var1++)
 /*  398 */     fireImmuneItems.put(Integer.valueOf(var1), Integer.valueOf(var0));
 /*      */   }
 /*      */ 
@@ -359,7 +384,7 @@
 /*      */ 
 /*      */   public static void addFireImmuneArmor(int var0)
 /*      */   {
-/*  410 */     for (int var1 = 0; fireImmuneArmors.get(Integer.valueOf(var1)) != null; var1++);
+/*  410 */     for (int var1 = 0; fireImmuneArmors.get(Integer.valueOf(var1)) != null; var1++)
 /*  415 */     fireImmuneArmors.put(Integer.valueOf(var1), Integer.valueOf(var0));
 /*      */   }
 /*      */ 
@@ -515,7 +540,7 @@
 /*  568 */     addEMC(Item.WOOD_DOOR.id, getEMC(Block.WOOD.id) * 6);
 /*  569 */     addEMC(Block.CHEST.id, getEMC(Block.WOOD.id) * 8);
 /*  570 */     addEMC(Block.WOOD_STAIRS.id, getEMC(Block.WOOD.id) * 6 / 4);
-/*  571 */     addEMC(Block.STEP.id, 2, getEMC(Block.WOOD.id) / 2);
+/*  571 */     //addEMC(Block.STEP.id, 2, getEMC(Block.WOOD.id) / 2);
 /*  572 */     addEMC(Item.BOAT.id, getEMC(Block.WOOD.id) * 5);
 /*  573 */     addEMC(Block.WOOD_PLATE.id, getEMC(Block.WOOD.id) * 2);
 /*  574 */     addEMC(Block.TRAP_DOOR.id, getEMC(Block.WOOD.id) * 6 / 2);
@@ -533,7 +558,7 @@
 /*  586 */     addEMC(Item.WOOD_AXE.id, getEMC(Block.WOOD.id) * 3 + getEMC(Item.STICK.id) * 2);
 /*  587 */     addEMC(Item.BONE.id, 96);
 /*      */ 
-/*  589 */     for (var0 = 0; var0 < 16; var0++)
+/*  589 */     for (int var0 = 0; var0 < 16; var0++)
 /*      */     {
 /*  591 */       if (var0 == 15)
 /*      */       {
@@ -568,7 +593,7 @@
 /*  621 */     addEMC(Block.WATER_LILY.id, 16);
 /*  622 */     addEMC(Block.VINE.id, 8);
 /*  623 */     addEMC(Block.SANDSTONE.id, getEMC(Block.SAND.id) * 4);
-/*  624 */     addEMC(Block.STEP.id, 1, getEMC(Block.SANDSTONE.id) / 2);
+/*  624 */     //addEMC(Block.STEP.id, 1, getEMC(Block.SANDSTONE.id) / 2);
 /*  625 */     addEMC(Block.GLASS.id, getEMC(Block.SAND.id));
 /*  626 */     addEMC(Item.GLASS_BOTTLE.id, getEMC(Block.GLASS.id));
 /*  627 */     addEMC(Block.GRAVEL.id, getEMC(Block.SANDSTONE.id));
@@ -580,7 +605,7 @@
 /*  633 */     addEMC(Item.ARROW.id, (getEMC(Item.STICK.id) + getEMC(Item.FLINT.id) + getEMC(Item.FEATHER.id)) / 4);
 /*  634 */     addEMC(Block.COBBLESTONE.id, 1);
 /*  635 */     addEMC(Block.FURNACE.id, getEMC(Block.COBBLESTONE.id) * 8);
-/*  636 */     addEMC(Block.STEP.id, 3, getEMC(Block.COBBLESTONE.id));
+/*  636 */     //addEMC(Block.STEP.id, 3, getEMC(Block.COBBLESTONE.id));
 /*  637 */     addEMC(Block.COBBLESTONE_STAIRS.id, getEMC(Block.COBBLESTONE.id) * 6 / 4);
 /*  638 */     addEMC(Block.LEVER.id, getEMC(Block.COBBLESTONE.id) + getEMC(Item.STICK.id));
 /*  639 */     addEMC(Block.NETHERRACK.id, getEMC(Block.COBBLESTONE.id));
@@ -588,14 +613,14 @@
 /*  641 */     addEMC(Block.WHITESTONE.id, getEMC(Block.NETHERRACK.id));
 /*  642 */     addEMC(Block.STONE_BUTTON.id, getEMC(Block.STONE.id) * 2);
 /*  643 */     addEMC(Block.STONE_PLATE.id, getEMC(Block.STONE.id) * 2);
-/*  644 */     addEMC(Block.STEP.id, 0, getEMC(Block.STONE.id));
+/*  644 */     //addEMC(Block.STEP.id, 0, getEMC(Block.STONE.id));
 /*      */ 
-/*  646 */     for (var0 = 0; var0 < 4; var0++)
+/*  646 */     for (int var0 = 0; var0 < 4; var0++)
 /*      */     {
 /*  648 */       addEMC(Block.SMOOTH_BRICK.id, var0, getEMC(Block.STONE.id));
 /*      */     }
 /*      */ 
-/*  651 */     addEMC(Block.STEP.id, 5, getEMC(Block.SMOOTH_BRICK.id));
+/*  651 */     //addEMC(Block.STEP.id, 5, getEMC(Block.SMOOTH_BRICK.id));
 /*  652 */     addEMC(Block.STONE_STAIRS.id, getEMC(Block.SMOOTH_BRICK.id) * 6 / 4);
 /*  653 */     addEMC(Item.STONE_SPADE.id, getEMC(Block.COBBLESTONE.id) + getEMC(Item.STICK.id) * 2);
 /*  654 */     addEMC(Item.STONE_SWORD.id, getEMC(Block.COBBLESTONE.id) * 2 + getEMC(Item.STICK.id));
@@ -608,7 +633,7 @@
 /*  661 */     addEMC(Block.WEB.id, (getEMC(Item.STRING.id) * 2 + getEMC(Item.SLIME_BALL.id)) / 4);
 /*  662 */     addEMC(Block.MOSSY_COBBLESTONE.id, getEMC(Block.COBBLESTONE.id) + getEMC(Item.SEEDS.id) + getEMC(Item.SLIME_BALL.id) * 6);
 /*      */ 
-/*  664 */     for (var0 = 0; var0 < 16; var0++)
+/*  664 */     for (int var0 = 0; var0 < 16; var0++)
 /*      */     {
 /*  666 */       addEMC(Block.WOOL.id, var0, getEMC(Item.STRING.id) * 4);
 /*      */     }
@@ -664,7 +689,7 @@
 /*  717 */     addEMC(Block.CLAY.id, getEMC(Item.CLAY_BALL.id) * 4);
 /*  718 */     addEMC(Item.CLAY_BRICK.id, getEMC(Item.CLAY_BALL.id));
 /*  719 */     addEMC(Block.BRICK.id, getEMC(Item.CLAY_BRICK.id) * 4);
-/*  720 */     addEMC(Block.STEP.id, 4, getEMC(Block.BRICK.id) / 2);
+/*  720 */     //addEMC(Block.STEP.id, 4, getEMC(Block.BRICK.id) / 2);
 /*  721 */     addEMC(Block.BRICK_STAIRS.id, getEMC(Block.BRICK.id) * 6 / 4);
 /*  722 */     addEMC(Block.DISPENSER.id, getEMC(Item.BOW.id) + getEMC(Item.REDSTONE.id) + getEMC(Block.COBBLESTONE.id) * 7);
 /*  723 */     addEMC(Block.NOTE_BLOCK.id, getEMC(Block.WOOD.id) * 8 + getEMC(Item.REDSTONE.id));
@@ -1092,13 +1117,13 @@
 /* 1145 */     ModLoader.addShapelessRecipe(new ItemStack(Item.GOLD_INGOT, 4), new Object[] { pstone(), Item.DIAMOND });
 /* 1146 */     ModLoader.addShapelessRecipe(new ItemStack(Item.GOLD_INGOT, 1), new Object[] { pstone(), Item.IRON_INGOT, Item.IRON_INGOT, Item.IRON_INGOT, Item.IRON_INGOT, Item.IRON_INGOT, Item.IRON_INGOT, Item.IRON_INGOT, Item.IRON_INGOT });
 /* 1147 */     ModLoader.addShapelessRecipe(new ItemStack(Item.IRON_INGOT, 8), new Object[] { pstone(), Item.GOLD_INGOT });
-/* 1148 */     ModLoader.addShapelessRecipe(new ItemStack(Block.ICE), new Object[] { new ItemStack(EEItem.zeroRing, 1, -1), Item.WATER_BUCKET });
-/* 1149 */     ModLoader.addShapelessRecipe(new ItemStack(Block.ICE), new Object[] { new ItemStack(EEItem.arcaneRing, 1, -1), Item.WATER_BUCKET });
+/* 1148 */     //ModLoader.addShapelessRecipe(new ItemStack(Block.ICE), new Object[] { new ItemStack(EEItem.zeroRing, 1, -1), Item.WATER_BUCKET });
+/* 1149 */     //ModLoader.addShapelessRecipe(new ItemStack(Block.ICE), new Object[] { new ItemStack(EEItem.arcaneRing, 1, -1), Item.WATER_BUCKET });
 /* 1150 */     ModLoader.addShapelessRecipe(new ItemStack(Block.GRASS), new Object[] { new ItemStack(EEItem.harvestRing, 1, -1), Block.DIRT });
 /* 1151 */     ModLoader.addShapelessRecipe(new ItemStack(Block.GRASS), new Object[] { new ItemStack(EEItem.arcaneRing, 1, -1), Block.DIRT });
-/* 1152 */     ModLoader.addShapelessRecipe(new ItemStack(Item.WATER_BUCKET), new Object[] { new ItemStack(EEItem.evertide, 1, -1), Item.BUCKET });
+/* 1152 */     //ModLoader.addShapelessRecipe(new ItemStack(Item.WATER_BUCKET), new Object[] { new ItemStack(EEItem.evertide, 1, -1), Item.BUCKET });
 /* 1153 */     ModLoader.addShapelessRecipe(new ItemStack(Item.LAVA_BUCKET), new Object[] { new ItemStack(EEItem.volcanite, 1, -1), Item.BUCKET, Item.REDSTONE });
-/*      */ 
+/*      */ 	   
 /* 1155 */     if (EEBase.props.getInt("AllowPedestals") == 1)
 /*      */     {
 /* 1157 */       ModLoader.addRecipe(EEBlock.pedestal, new Object[] { "R#R", "R#R", "###", Character.valueOf('R'), EEItem.redMatter, Character.valueOf('#'), EEBlock.dmBlock });
@@ -1501,7 +1526,7 @@
 /*      */   }
 /*      */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.EEMaps
  * JD-Core Version:    0.6.2
  */

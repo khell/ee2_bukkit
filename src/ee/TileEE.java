@@ -73,7 +73,7 @@
 /*     */           }
 /*     */         }
 /*     */ 
-/*  85 */         for (var2 = 0; var2 < ((TileEntityChest)var0).getSize(); var2++)
+/*  85 */         for (int var2 = 0; var2 < ((TileEntityChest)var0).getSize(); var2++)
 /*     */         {
 /*  87 */           if (((TileEntityChest)var0).getItem(var2) == null)
 /*     */           {
@@ -95,7 +95,7 @@
 /*     */           }
 /*     */         }
 /*     */ 
-/* 107 */         for (var2 = 0; var2 < ((TileAlchChest)var0).getSize(); var2++)
+/* 107 */         for (int var2 = 0; var2 < ((TileAlchChest)var0).getSize(); var2++)
 /*     */         {
 /* 109 */           if (((TileAlchChest)var0).getItem(var2) == null)
 /*     */           {
@@ -169,25 +169,6 @@
 /* 185 */       int var4 = this.world.getTypeId(this.x + 1, this.y, this.z);
 /* 186 */       byte var5 = 2;
 /*     */ 
-/* 188 */       if ((net.minecraft.server.Block.n[var1] != 0) && (net.minecraft.server.Block.n[var2] == 0))
-/*     */       {
-/* 190 */         var5 = 3;
-/*     */       }
-/*     */ 
-/* 193 */       if ((net.minecraft.server.Block.n[var2] != 0) && (net.minecraft.server.Block.n[var1] == 0))
-/*     */       {
-/* 195 */         var5 = 2;
-/*     */       }
-/*     */ 
-/* 198 */       if ((net.minecraft.server.Block.n[var3] != 0) && (net.minecraft.server.Block.n[var4] == 0))
-/*     */       {
-/* 200 */         var5 = 5;
-/*     */       }
-/*     */ 
-/* 203 */       if ((net.minecraft.server.Block.n[var4] != 0) && (net.minecraft.server.Block.n[var3] == 0))
-/*     */       {
-/* 205 */         var5 = 4;
-/*     */       }
 /*     */ 
 /* 208 */       this.direction = var5;
 /*     */     }
@@ -347,7 +328,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.TileEE
  * JD-Core Version:    0.6.2
  */

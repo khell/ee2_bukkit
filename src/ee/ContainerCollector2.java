@@ -37,7 +37,7 @@
 /*  38 */     a(new Slot(var2, 13, 140, 13));
 /*  39 */     a(new Slot(var2, 14, 169, 36));
 /*     */ 
-/*  41 */     for (var3 = 0; var3 < 3; var3++)
+/*  41 */     for (int var3 = 0; var3 < 3; var3++)
 /*     */     {
 /*  43 */       for (int var4 = 0; var4 < 9; var4++)
 /*     */       {
@@ -45,7 +45,7 @@
 /*     */       }
 /*     */     }
 /*     */ 
-/*  49 */     for (var3 = 0; var3 < 9; var3++)
+/*  49 */     for (int var3 = 0; var3 < 9; var3++)
 /*     */     {
 /*  51 */       a(new Slot(var1, var3, 20 + var3 * 18, 142));
 /*     */     }
@@ -218,7 +218,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ContainerCollector2
  * JD-Core Version:    0.6.2
  */

@@ -55,12 +55,12 @@
 /*     */     String var2;
 /*  56 */     while ((var2 = var1.readLine()) != null)
 /*     */     {
-/*  58 */       String var2 = new String(var2.getBytes(), "UTF-8");
+/*  58 */       var2 = new String(var2.getBytes(), "UTF-8");
 /*  59 */       boolean var3 = false;
 /*     */ 
 /*  61 */       char var14 = '\000';
-/*     */ 
-/*  63 */       for (int var4 = 0; (var4 < var2.length()) && (Character.isWhitespace(var14 = var2.charAt(var4))); var4++);
+/*     */ 		int var4;
+/*  63 */       for (var4 = 0; (var4 < var2.length()) && (Character.isWhitespace(var14 = var2.charAt(var4))); var4++);
 /*  68 */       if ((var2.length() - var4 != 0) && (var2.charAt(var4) != '#') && (var2.charAt(var4) != '!'))
 /*     */       {
 /*  70 */         boolean var6 = var2.indexOf('\\', var4) != -1;
@@ -127,14 +127,12 @@
 /*     */         }
 /* 138 */         boolean var15 = (var14 == ':') || (var14 == '=');
 /*     */         String var9;
-/*     */         String var9;
 /* 141 */         if (var6)
 /*     */         {
 /* 143 */           var9 = var7.toString();
 /*     */         }
 /*     */         else
 /*     */         {
-/*     */           String var9;
 /* 145 */           if ((!var15) && (!Character.isWhitespace(var14)))
 /*     */           {
 /* 147 */             var9 = var2.substring(var4, var4);
@@ -325,7 +323,6 @@
 /*     */     String var3;
 /* 342 */     while ((var3 = var2.readLine()) != null)
 /*     */     {
-/*     */       String var3;
 /* 344 */       if ((var3.trim().length() != 0) && (var3.charAt(0) != '#') && (var3.contains("=")))
 /*     */       {
 /* 346 */         int var4 = var3.indexOf('=');
@@ -559,7 +556,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.EEProps
  * JD-Core Version:    0.6.2
  */

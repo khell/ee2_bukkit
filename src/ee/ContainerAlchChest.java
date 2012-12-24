@@ -30,7 +30,7 @@
 /*     */       }
 /*     */     }
 /*     */ 
-/*  34 */     for (var4 = 0; var4 < 3; var4++)
+/*  34 */     for (int var4 = 0; var4 < 3; var4++)
 /*     */     {
 /*  36 */       for (int var5 = 0; var5 < 9; var5++)
 /*     */       {
@@ -38,7 +38,7 @@
 /*     */       }
 /*     */     }
 /*     */ 
-/*  42 */     for (var4 = 0; var4 < 9; var4++)
+/*  42 */     for (int var4 = 0; var4 < 9; var4++)
 /*     */     {
 /*  44 */       a(new Slot(var2, var4, 48 + var4 * 18, 210));
 /*     */     }
@@ -96,7 +96,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ContainerAlchChest
  * JD-Core Version:    0.6.2
  */

@@ -93,7 +93,7 @@
 /*     */       }
 /*     */     }
 /*     */ 
-/*  94 */     for (var8 = -4; var8 <= 4; var8++)
+/*  94 */     for (int var8 = -4; var8 <= 4; var8++)
 /*     */     {
 /*  96 */       for (int var13 = -4; var13 <= 4; var13++)
 /*     */       {
@@ -121,7 +121,7 @@
 /*     */ 
 /* 121 */               if (!var11)
 /*     */               {
-/* 123 */                 for (var12 = -1; var12 <= 1; var12++)
+/* 123 */                 for (int var12 = -1; var12 <= 1; var12++)
 /*     */                 {
 /* 125 */                   if ((var2.getTypeId(var4 + var8, var5 + var13 + var12, var6 + var10) == Block.LEAVES.id) || (var2.getTypeId(var4 + var8, var5 + var13 + var12, var6 + var10) == Block.LOG.id))
 /*     */                   {
@@ -134,7 +134,7 @@
 /*     */ 
 /* 134 */               if (!var11)
 /*     */               {
-/* 136 */                 for (var12 = -1; var12 <= 1; var12++)
+/* 136 */                 for (int var12 = -1; var12 <= 1; var12++)
 /*     */                 {
 /* 138 */                   if ((var2.getTypeId(var4 + var8, var5 + var13, var6 + var10 + var12) == Block.LEAVES.id) || (var2.getTypeId(var4 + var8, var5 + var13, var6 + var10 + var12) == Block.LOG.id))
 /*     */                   {
@@ -208,7 +208,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ItemIgnitionRing
  * JD-Core Version:    0.6.2
  */

@@ -382,7 +382,7 @@
 /*      */         }
 /*      */       }
 /*      */ 
-/*  427 */       for (var3 = 0; var3 < this.items.length; var3++)
+/*  427 */       for (int var3 = 0; var3 < this.items.length; var3++)
 /*      */       {
 /*  429 */         if ((this.items[var3] != null) && (isValidMaterial(this.items[var3])) && (EEMaps.getEMC(this.items[var3]) < var2))
 /*      */         {
@@ -416,7 +416,7 @@
 /*  463 */       return false;
 /*      */     }
 /*      */ 
-/*  467 */     var4 = 0;
+/*  467 */     int var4 = 0;
 /*      */ 
 /*  469 */     while ((var3 + emc(var1) >= var2) && (var4 < 10))
 /*      */     {
@@ -1022,7 +1022,7 @@
 /*      */   }
 /*      */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.TileAlchChest
  * JD-Core Version:    0.6.2
  */

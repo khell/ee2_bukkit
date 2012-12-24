@@ -217,7 +217,7 @@
 /*      */       }
 /*      */     }
 /*      */ 
-/*  218 */     var4 = (int)EEBase.playerX(var3);
+/*  218 */     int var4 = (int)EEBase.playerX(var3);
 /*  219 */     int var5 = (int)EEBase.playerY(var3);
 /*  220 */     int var6 = (int)EEBase.playerZ(var3);
 /*      */ 
@@ -837,7 +837,7 @@
 /*      */       }
 /*      */     }
 /*      */ 
-/*  865 */     for (var8 = -4; var8 <= 4; var8++)
+/*  865 */     for (int var8 = -4; var8 <= 4; var8++)
 /*      */     {
 /*  867 */       for (int var13 = -4; var13 <= 4; var13++)
 /*      */       {
@@ -865,7 +865,7 @@
 /*      */ 
 /*  892 */               if (!var11)
 /*      */               {
-/*  894 */                 for (var12 = -1; var12 <= 1; var12++)
+/*  894 */                 for (int var12 = -1; var12 <= 1; var12++)
 /*      */                 {
 /*  896 */                   if ((var2.getTypeId(var4 + var8, var5 + var13 + var12, var6 + var10) == Block.LEAVES.id) || (var2.getTypeId(var4 + var8, var5 + var13 + var12, var6 + var10) == Block.LOG.id))
 /*      */                   {
@@ -878,7 +878,7 @@
 /*      */ 
 /*  905 */               if (!var11)
 /*      */               {
-/*  907 */                 for (var12 = -1; var12 <= 1; var12++)
+/*  907 */                 for (int var12 = -1; var12 <= 1; var12++)
 /*      */                 {
 /*  909 */                   if ((var2.getTypeId(var4 + var8, var5 + var13, var6 + var10 + var12) == Block.LEAVES.id) || (var2.getTypeId(var4 + var8, var5 + var13, var6 + var10 + var12) == Block.LOG.id))
 /*      */                   {
@@ -913,7 +913,7 @@
 /*      */       }
 /*      */     }
 /*      */ 
-/*  943 */     for (var8 = -4; var8 <= 4; var8++)
+/*  943 */     for (int var8 = -4; var8 <= 4; var8++)
 /*      */     {
 /*  945 */       for (int var12 = -4; var12 <= 4; var12++)
 /*      */       {
@@ -1238,7 +1238,7 @@
 /*      */   }
 /*      */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ItemArcaneRing
  * JD-Core Version:    0.6.2
  */

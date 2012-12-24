@@ -306,31 +306,18 @@
 /*     */ 
 /*     */   private void doWatchCheck(List var1, World var2)
 /*     */   {
-/* 309 */     int var3 = 0;
-/* 310 */     Iterator var4 = var1.iterator();
-/*     */     int var7;
-/*     */     int var8;
-/* 312 */     for (; var4.hasNext(); 
-/* 318 */       var8 < var7)
-/*     */     {
-/* 314 */       EntityHuman var5 = (EntityHuman)var4.next();
-/* 315 */       ItemStack[] var6 = EEBase.quickBar(var5);
-/* 316 */       var7 = var6.length;
-/*     */ 
-/* 318 */       var8 = 0; continue;
-/*     */ 
-/* 320 */       ItemStack var9 = var6[var8];
-/*     */ 
-/* 322 */       if ((var9 != null) && ((var9.getItem() instanceof ItemEECharged)) && ((var9.getItem() instanceof ItemWatchOfTime)) && ((var9.getData() & 0x1) == 1) && (EEBase.getPlayerEffect(var9.getItem(), var5) > 0))
-/*     */       {
-/* 324 */         var3 += ((ItemEECharged)var9.getItem()).chargeLevel(var9) + 1;
-/* 325 */         EEBase.playerWatchMagnitude.put(var5, Integer.valueOf(((ItemEECharged)var9.getItem()).chargeLevel(var9) + 1));
-/*     */       }
-/* 318 */       var8++;
-/*     */     }
-/*     */ 
-/* 330 */     EEBase.playerWoftFactor = var3;
-/*     */   }
+	/* 309 */     int var3 = 0;
+	/* 310 */     Iterator var4 = var1.iterator();
+	/*     */     int var7;
+	/*     */     int var8;
+	/* 312 */     for (; var4.hasNext(); ) {
+		/* 318 */      //if(var8 < var7) {
+			/* 314 */       EntityHuman var5 = (EntityHuman)var4.next();
+			/* 315 */       ItemStack[] var6 = EEBase.quickBar(var5);
+			/* 316 */       var7 = var6.length;
+			/*     */ 
+			/* 318 */       var8 = 0; continue;   }
+			}
 /*     */ 
 /*     */   private void doFlightCheck(List var1, World var2)
 /*     */   {
@@ -552,7 +539,7 @@
 /*     */       }
 /*     */     }
 /*     */ 
-/* 554 */     for (var3 = 0; var3 < 4; var3++)
+/* 554 */     for (int var3 = 0; var3 < 4; var3++)
 /*     */     {
 /* 556 */       if ((var1.inventory.armor[var3] != null) && (EEMaps.isFireImmuneArmor(var1.inventory.armor[var3].id)))
 /*     */       {
@@ -579,7 +566,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     net.minecraft.server.mod_EE
  * JD-Core Version:    0.6.2
  */

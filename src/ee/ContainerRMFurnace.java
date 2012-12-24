@@ -34,7 +34,7 @@
 /*     */ 
 /*  36 */     a(new Slot(var2, 14, 125, 35));
 /*     */ 
-/*  38 */     for (var3 = 0; var3 <= 2; var3++)
+/*  38 */     for (int var3 = 0; var3 <= 2; var3++)
 /*     */     {
 /*  40 */       for (int var4 = 0; var4 <= 3; var4++)
 /*     */       {
@@ -42,7 +42,7 @@
 /*     */       }
 /*     */     }
 /*     */ 
-/*  46 */     for (var3 = 0; var3 < 3; var3++)
+/*  46 */     for (int var3 = 0; var3 < 3; var3++)
 /*     */     {
 /*  48 */       for (int var4 = 0; var4 < 9; var4++)
 /*     */       {
@@ -50,7 +50,7 @@
 /*     */       }
 /*     */     }
 /*     */ 
-/*  54 */     for (var3 = 0; var3 < 9; var3++)
+/*  54 */     for (int var3 = 0; var3 < 9; var3++)
 /*     */     {
 /*  56 */       a(new Slot(var1, var3, 24 + var3 * 18, 142));
 /*     */     }
@@ -248,7 +248,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ContainerRMFurnace
  * JD-Core Version:    0.6.2
  */

@@ -258,7 +258,7 @@
 /*     */               {
 /* 266 */                 callLightning(var2, var20, var4);
 /*     */ 
-/* 268 */                 for (var12 = 0; var12 <= this.world.random.nextInt(3); var12++)
+/* 268 */                 for (int var12 = 0; var12 <= this.world.random.nextInt(3); var12++)
 /*     */                 {
 /* 270 */                   callLightning(var2, var20, var4);
 /*     */                 }
@@ -294,7 +294,7 @@
 /*     */           {
 /* 302 */             callLightning(var2, var20, var4);
 /*     */ 
-/* 304 */             for (var12 = 0; var12 <= this.world.random.nextInt(3); var12++)
+/* 304 */             for (int var12 = 0; var12 <= this.world.random.nextInt(3); var12++)
 /*     */             {
 /* 306 */               callLightning(var2, var20, var4);
 /*     */             }
@@ -339,7 +339,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.EntityWindEssence
  * JD-Core Version:    0.6.2
  */

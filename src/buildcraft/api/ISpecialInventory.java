@@ -10,7 +10,7 @@ public abstract interface ISpecialInventory extends IInventory
   public abstract ItemStack extractItem(boolean paramBoolean, Orientations paramOrientations);
 }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     buildcraft.api.ISpecialInventory
  * JD-Core Version:    0.6.2
  */

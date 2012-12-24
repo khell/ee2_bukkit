@@ -72,7 +72,7 @@
 /* 72 */   public static int NULL_TOME = 27339;
 /*    */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.core.ItemIds
  * JD-Core Version:    0.6.2
  */

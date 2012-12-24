@@ -193,7 +193,7 @@
 /* 192 */       var5 = var3.inventory.items;
 /* 193 */       var6 = var5.length;
 /*     */ 
-/* 195 */       for (var7 = 0; var7 < var6; var7++)
+/* 195 */       for (int var7 = 0; var7 < var6; var7++)
 /*     */       {
 /* 197 */         ItemStack var8 = var5[var7];
 /*     */ 
@@ -316,7 +316,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ItemEternalDensity
  * JD-Core Version:    0.6.2
  */

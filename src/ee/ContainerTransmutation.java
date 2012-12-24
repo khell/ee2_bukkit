@@ -65,7 +65,7 @@
 /*     */       }
 /*     */     }
 /*     */ 
-/*  67 */     for (var4 = 0; var4 < 9; var4++)
+/*  67 */     for (int var4 = 0; var4 < 9; var4++)
 /*     */     {
 /*  69 */       a(new Slot(this.player.inventory, var4, 35 + var4 * 18, 181));
 /*     */     }
@@ -377,7 +377,6 @@
 /*     */ 
 /* 392 */     if (var1.count > 0)
 /*     */     {
-/*     */       int var11;
 /*     */       int var11;
 /* 396 */       if (var5)
 /*     */       {
@@ -757,7 +756,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ContainerTransmutation
  * JD-Core Version:    0.6.2
  */

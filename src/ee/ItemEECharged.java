@@ -112,7 +112,7 @@
 /* 112 */         var16.setTag(new NBTTagCompound());
 /* 113 */         cleanDroplist(var16);
 /* 114 */         ItemStack[] var17 = var9;
-/* 115 */         var13 = var9.length;
+/* 115 */         int var13 = var9.length;
 /*     */ 
 /* 117 */         for (int var18 = 0; var18 < var13; var18++)
 /*     */         {
@@ -478,7 +478,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ItemEECharged
  * JD-Core Version:    0.6.2
  */

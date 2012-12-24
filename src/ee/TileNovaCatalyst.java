@@ -73,7 +73,7 @@
 /*     */           }
 /*     */         }
 /*     */ 
-/*  88 */         for (var2 = 0; var2 < ((TileEntityChest)var0).getSize(); var2++)
+/*  88 */         for (int var2 = 0; var2 < ((TileEntityChest)var0).getSize(); var2++)
 /*     */         {
 /*  90 */           if (((TileEntityChest)var0).getItem(var2) == null)
 /*     */           {
@@ -95,7 +95,7 @@
 /*     */           }
 /*     */         }
 /*     */ 
-/* 110 */         for (var2 = 0; var2 < ((TileAlchChest)var0).getSize(); var2++)
+/* 110 */         for (int var2 = 0; var2 < ((TileAlchChest)var0).getSize(); var2++)
 /*     */         {
 /* 112 */           if (((TileAlchChest)var0).getItem(var2) == null)
 /*     */           {
@@ -164,25 +164,6 @@
 /* 181 */       int var7 = this.world.getTypeId(var1 + 1, var2, var3);
 /* 182 */       byte var8 = 2;
 /*     */ 
-/* 184 */       if ((Block.n[var4] != 0) && (Block.n[var5] == 0))
-/*     */       {
-/* 186 */         var8 = 3;
-/*     */       }
-/*     */ 
-/* 189 */       if ((Block.n[var5] != 0) && (Block.n[var4] == 0))
-/*     */       {
-/* 191 */         var8 = 2;
-/*     */       }
-/*     */ 
-/* 194 */       if ((Block.n[var6] != 0) && (Block.n[var7] == 0))
-/*     */       {
-/* 196 */         var8 = 5;
-/*     */       }
-/*     */ 
-/* 199 */       if ((Block.n[var7] != 0) && (Block.n[var6] == 0))
-/*     */       {
-/* 201 */         var8 = 4;
-/*     */       }
 /*     */ 
 /* 204 */       this.direction = var8;
 /*     */     }
@@ -339,7 +320,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.TileNovaCatalyst
  * JD-Core Version:    0.6.2
  */

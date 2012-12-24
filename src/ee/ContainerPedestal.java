@@ -25,7 +25,7 @@
 /*    */       }
 /*    */     }
 /*    */ 
-/* 29 */     for (var3 = 0; var3 < 9; var3++)
+/* 29 */     for (int var3 = 0; var3 < 9; var3++)
 /*    */     {
 /* 31 */       a(new Slot(var1, var3, 8 + var3 * 18, 112));
 /*    */     }
@@ -47,7 +47,7 @@
 /*    */   }
 /*    */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ContainerPedestal
  * JD-Core Version:    0.6.2
  */

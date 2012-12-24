@@ -78,7 +78,7 @@
 /*     */       }
 /*     */     }
 /*     */ 
-/*  81 */     for (var8 = -4; var8 <= 4; var8++)
+/*  81 */     for (int var8 = -4; var8 <= 4; var8++)
 /*     */     {
 /*  83 */       for (int var12 = -4; var12 <= 4; var12++)
 /*     */       {
@@ -158,7 +158,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ItemZeroRing
  * JD-Core Version:    0.6.2
  */

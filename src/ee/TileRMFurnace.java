@@ -498,7 +498,7 @@
 /* 547 */       return true;
 /*     */     }
 /*     */ 
-/* 551 */     for (var2 = 15; var2 <= 26; var2++)
+/* 551 */     for (int var2 = 15; var2 <= 26; var2++)
 /*     */     {
 /* 553 */       if (this.items[var2] == null)
 /*     */       {
@@ -783,7 +783,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.TileRMFurnace
  * JD-Core Version:    0.6.2
  */

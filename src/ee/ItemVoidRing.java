@@ -455,7 +455,7 @@
 /* 465 */       var5 = var3.inventory.items;
 /* 466 */       var6 = var5.length;
 /*     */ 
-/* 468 */       for (var7 = 0; var7 < var6; var7++)
+/* 468 */       for (int var7 = 0; var7 < var6; var7++)
 /*     */       {
 /* 470 */         ItemStack var8 = var5[var7];
 /*     */ 
@@ -611,7 +611,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ItemVoidRing
  * JD-Core Version:    0.6.2
  */

@@ -120,8 +120,8 @@
 /* 125 */     if (chargeLevel(var1) > 0)
 /*     */     {
 /* 127 */       boolean var4 = false;
-/*     */ 
-/* 130 */       for (int var5 = 1; var5 <= chargeLevel(var1); var5++)
+/*     */ 		int var5;
+/* 130 */       for (var5 = 1; var5 <= chargeLevel(var1); var5++)
 /*     */       {
 /* 132 */         if (var5 == chargeLevel(var1))
 /*     */         {
@@ -666,7 +666,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ItemRedKatar
  * JD-Core Version:    0.6.2
  */

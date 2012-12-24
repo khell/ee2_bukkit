@@ -389,7 +389,7 @@
 /* 428 */     var1.set("Items", var2);
 /* 429 */     var1.setBoolean("readTome", this.readTome);
 /*     */ 
-/* 431 */     for (var3 = 0; var3 < this.knowledge.size(); var3++)
+/* 431 */     for (int var3 = 0; var3 < this.knowledge.size(); var3++)
 /*     */     {
 /* 433 */       if (this.knowledge.get(Integer.valueOf(var3)) != null)
 /*     */       {
@@ -419,9 +419,10 @@
 /*     */ 
 /* 459 */       if (!playerKnows(var1, var2))
 /*     */       {
-/* 463 */         for (int var3 = 0; this.knowledge.get(Integer.valueOf(var3)) != null; var3++);
+/* 463 */         for (int var3 = 0; this.knowledge.get(Integer.valueOf(var3)) != null; var3++) {
 /* 468 */         this.knowledge.put(Integer.valueOf(var3), new Integer[] { Integer.valueOf(var1), Integer.valueOf(var2) });
 /* 469 */         a();
+}
 /*     */       }
 /*     */     }
 /*     */   }
@@ -598,7 +599,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.TransTabletData
  * JD-Core Version:    0.6.2
  */

@@ -283,7 +283,7 @@
 /*      */             double var6;
 /*  293 */             if (this.world.random.nextInt(2) == 0)
 /*      */             {
-/*  295 */               double var6 = this.z + 0.5D + 0.25D * var14;
+/*  295 */               var6 = this.z + 0.5D + 0.25D * var14;
 /*  296 */               var12 = this.world.random.nextFloat() * 2.0F * var14;
 /*      */             }
 /*      */             else
@@ -294,7 +294,7 @@
 /*      */             double var2;
 /*  306 */             if (this.world.random.nextInt(2) == 0)
 /*      */             {
-/*  308 */               double var2 = this.x + 0.5D + 0.25D * var14;
+/*  308 */               var2 = this.x + 0.5D + 0.25D * var14;
 /*  309 */               var8 = this.world.random.nextFloat() * 2.0F * var14;
 /*      */             }
 /*      */             else
@@ -952,7 +952,7 @@
 /*      */       }
 /*      */     }
 /*      */ 
-/*  976 */     for (var2 = -4; var2 <= 4; var2++)
+/*  976 */     for (int var2 = -4; var2 <= 4; var2++)
 /*      */     {
 /*  978 */       for (int var6 = -4; var6 <= 4; var6++)
 /*      */       {
@@ -1609,7 +1609,7 @@
 /*      */   }
 /*      */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.TilePedestal
  * JD-Core Version:    0.6.2
  */

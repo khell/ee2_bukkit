@@ -242,7 +242,7 @@
 /*     */ 
 /* 250 */       if (h_())
 /*     */       {
-/* 252 */         for (var12 = 0; var12 < 4; var12++)
+/* 252 */         for (int var12 = 0; var12 < 4; var12++)
 /*     */         {
 /* 254 */           float var22 = 0.25F;
 /* 255 */           this.world.a("smoke", this.locX - this.motX * var22, this.locY - this.motY * var22, this.locZ - this.motZ * var22, this.motX, this.motY, this.motZ);
@@ -347,7 +347,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.EntityLavaEssence
  * JD-Core Version:    0.6.2
  */

@@ -192,7 +192,7 @@
 /*      */       }
 /*      */     }
 /*      */ 
-/*  195 */     var4 = 0;
+/*  195 */     int var4 = 0;
 /*      */ 
 /*  197 */     for (int var5 = 0; var5 < var1.getSize(); var5++)
 /*      */     {
@@ -229,7 +229,7 @@
 /*      */       }
 /*      */     }
 /*      */ 
-/*  233 */     var5 = 0;
+/*  233 */     int var5 = 0;
 /*      */ 
 /*  235 */     for (int var6 = 0; var6 < var4.items.length + var4.armor.length; var6++)
 /*      */     {
@@ -478,7 +478,7 @@
 /*      */ 
 /*  503 */     var4 = 0;
 /*      */ 
-/*  505 */     for (var7 = 0; var7 < var6.length; var7++)
+/*  505 */     for (int var7 = 0; var7 < var6.length; var7++)
 /*      */     {
 /*  507 */       if ((var6[var7] != null) && ((var6[var7].doMaterialsMatch(var0)) || ((var5) && (var6[var7].id == var0.id))))
 /*      */       {
@@ -1194,9 +1194,9 @@
 /*      */   {
 /* 1234 */     int var1 = 0;
 /*      */ 
-/* 1237 */     for (Integer[] var2 = { Integer.valueOf(var0.x), Integer.valueOf(var0.y), Integer.valueOf(var0.z) }; pedestalCoords.get(Integer.valueOf(var1)) != null; var1++);
+/* 1237 */     for (Integer[] var2 = { Integer.valueOf(var0.x), Integer.valueOf(var0.y), Integer.valueOf(var0.z) }; pedestalCoords.get(Integer.valueOf(var1)) != null; var1++) {
 /* 1242 */     pedestalCoords.put(Integer.valueOf(var1), var2);
-/* 1243 */     validatePedestalCoords(var0.world);
+/* 1243 */     validatePedestalCoords(var0.world); }
 /*      */   }
 /*      */ 
 /*      */   public static void validatePedestalCoords(World var0)
@@ -1398,7 +1398,7 @@
 /*      */   }
 /*      */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.EEBase
  * JD-Core Version:    0.6.2
  */

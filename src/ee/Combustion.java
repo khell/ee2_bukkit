@@ -93,7 +93,7 @@
 /*     */     }
 /*     */ 
 /* 100 */     this.explosionSize *= 2.0F;
-/* 101 */     var3 = MathHelper.floor(this.explosionX - this.explosionSize - 1.0D);
+/* 101 */     int var3 = MathHelper.floor(this.explosionX - this.explosionSize - 1.0D);
 /* 102 */     int var4 = MathHelper.floor(this.explosionX + this.explosionSize + 1.0D);
 /* 103 */     int var5 = MathHelper.floor(this.explosionY - this.explosionSize - 1.0D);
 /* 104 */     int var29 = MathHelper.floor(this.explosionY + this.explosionSize + 1.0D);
@@ -140,7 +140,7 @@
 /* 145 */         int var38 = this.worldObj.getTypeId(var36, var37, var16);
 /* 146 */         int var18 = this.worldObj.getTypeId(var36, var37 - 1, var16);
 /*     */ 
-/* 148 */         if ((var38 == 0) && (Block.n[var18] != 0) && (this.ExplosionRNG.nextInt(3) == 0))
+/* 148 */         if ((var38 == 0) && (Block.n[var18]) && (this.ExplosionRNG.nextInt(3) == 0))
 /*     */         {
 /* 150 */           this.worldObj.setTypeId(var36, var37, var16, Block.FIRE.id);
 /*     */         }
@@ -265,7 +265,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.Combustion
  * JD-Core Version:    0.6.2
  */

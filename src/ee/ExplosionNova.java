@@ -106,7 +106,7 @@
 /*     */     }
 /*     */ 
 /* 113 */     this.explosionSize *= 1.7F;
-/* 114 */     var3 = MathHelper.floor(this.explosionX - this.explosionSize - 1.0D);
+/* 114 */     int var3 = MathHelper.floor(this.explosionX - this.explosionSize - 1.0D);
 /* 115 */     int var4 = MathHelper.floor(this.explosionX + this.explosionSize + 1.0D);
 /* 116 */     int var5 = MathHelper.floor(this.explosionY - this.explosionSize - 1.0D);
 /* 117 */     int var29 = MathHelper.floor(this.explosionY + this.explosionSize + 1.0D);
@@ -152,7 +152,7 @@
 /* 157 */         int var38 = this.worldObj.getTypeId(var37, var36, var16);
 /* 158 */         int var18 = this.worldObj.getTypeId(var37, var36 - 1, var16);
 /*     */ 
-/* 160 */         if ((var38 == 0) && (Block.n[var18] != 0) && (this.ExplosionRNG.nextInt(3) == 0))
+/* 160 */         if ((var38 == 0) && (Block.n[var18]) && (this.ExplosionRNG.nextInt(3) == 0))
 /*     */         {
 /* 162 */           this.worldObj.setTypeId(var37, var36, var16, Block.FIRE.id);
 /*     */         }
@@ -211,7 +211,7 @@
 /*     */ 
 /* 218 */       if (var7 > 0)
 /*     */       {
-/* 220 */         var8 = this.worldObj.getData(var4, var5, var6);
+/* 220 */         int var8 = this.worldObj.getData(var4, var5, var6);
 /* 221 */         ArrayList var27 = Block.byId[var7].getBlockDropped(this.worldObj, var4, var5, var6, var8, 0);
 /* 222 */         Iterator var10 = var27.iterator();
 /*     */ 
@@ -277,7 +277,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ExplosionNova
  * JD-Core Version:    0.6.2
  */

@@ -251,7 +251,7 @@
 /*     */ 
 /* 275 */       if (var1 != null)
 /*     */       {
-/* 277 */         for (var3 = 0; var3 < var2.inventory.items.length; var3++)
+/* 277 */         for (int var3 = 0; var3 < var2.inventory.items.length; var3++)
 /*     */         {
 /* 279 */           if (var2.inventory.items[var3] == null)
 /*     */           {
@@ -280,7 +280,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.EntityLootBall
  * JD-Core Version:    0.6.2
  */

@@ -257,7 +257,7 @@
 /*     */         }
 /*     */       }
 /*     */ 
-/* 269 */       for (var11 = -2; var11 <= 2; var11++)
+/* 269 */       for (int var11 = -2; var11 <= 2; var11++)
 /*     */       {
 /* 271 */         for (int var5 = -2; var5 <= 2; var5++)
 /*     */         {
@@ -309,7 +309,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.EntityPyrokinesis
  * JD-Core Version:    0.6.2
  */

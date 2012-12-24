@@ -117,7 +117,7 @@
 /*     */           }
 /*     */         }
 /*     */ 
-/* 122 */         for (var2 = 0; var2 < ((TileEntityChest)var0).getSize(); var2++)
+/* 122 */         for (int var2 = 0; var2 < ((TileEntityChest)var0).getSize(); var2++)
 /*     */         {
 /* 124 */           if (((TileEntityChest)var0).getItem(var2) == null)
 /*     */           {
@@ -139,7 +139,7 @@
 /*     */           }
 /*     */         }
 /*     */ 
-/* 144 */         for (var2 = 0; var2 < ((TileAlchChest)var0).getSize(); var2++)
+/* 144 */         for (int var2 = 0; var2 < ((TileAlchChest)var0).getSize(); var2++)
 /*     */         {
 /* 146 */           if (((TileAlchChest)var0).getItem(var2) == null)
 /*     */           {
@@ -798,7 +798,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.TileRelay2
  * JD-Core Version:    0.6.2
  */

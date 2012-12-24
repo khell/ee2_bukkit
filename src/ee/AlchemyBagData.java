@@ -297,7 +297,7 @@
 /*     */         }
 /*     */       }
 /*     */ 
-/* 332 */       for (var3 = 0; var3 < this.items.length; var3++)
+/* 332 */       for (int var3 = 0; var3 < this.items.length; var3++)
 /*     */       {
 /* 334 */         if ((this.items[var3] != null) && (isValidMaterial(this.items[var3])) && (EEMaps.getEMC(this.items[var3]) < var2))
 /*     */         {
@@ -331,7 +331,7 @@
 /* 368 */       return false;
 /*     */     }
 /*     */ 
-/* 372 */     var4 = 0;
+/* 372 */     int var4 = 0;
 /*     */ 
 /* 374 */     while ((var3 + emc(var1) >= var2) && (var4 < 10))
 /*     */     {
@@ -742,7 +742,7 @@
 /*     */ 
 /* 793 */     if (var1 != null)
 /*     */     {
-/* 795 */       for (var3 = 0; var3 < this.items.length; var3++)
+/* 795 */       for (int var3 = 0; var3 < this.items.length; var3++)
 /*     */       {
 /* 797 */         if (this.items[var3] == null)
 /*     */         {
@@ -843,7 +843,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.AlchemyBagData
  * JD-Core Version:    0.6.2
  */

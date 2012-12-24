@@ -73,8 +73,8 @@
 /*  78 */     if (chargeLevel(var1) > 0)
 /*     */     {
 /*  80 */       boolean var4 = false;
-/*     */ 
-/*  83 */       for (int var5 = 1; var5 <= chargeLevel(var1); var5++)
+/*     */ 		int var5;
+/*  83 */       for ( var5 = 1; var5 <= chargeLevel(var1); var5++)
 /*     */       {
 /*  85 */         if (var5 == chargeLevel(var1))
 /*     */         {
@@ -159,7 +159,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ItemRedSword
  * JD-Core Version:    0.6.2
  */

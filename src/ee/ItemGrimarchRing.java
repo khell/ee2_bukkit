@@ -23,21 +23,20 @@
 /*     */   public void doBreak(ItemStack var1, World var2, EntityHuman var3, int var4)
 /*     */   {
 /*  24 */     int var5 = var4;
-/*     */     int var6;
-/*  26 */     for (; var5 > 0; 
-/*  35 */       var6 > 0)
+/*     */     int var6 = -1;
+/*  26 */     for (; var5 > 0 && 
+/*  35 */       var6 > 0;)
 /*     */     {
 /*  28 */       var6 = ConsumeReagent(var3);
 /*     */ 
 /*  30 */       if (var6 == 0)
 /*     */       {
 /*  32 */         break;
-/*     */ 
+/*     */ 		}
 /*  37 */         var2.makeSound(var3, "random.bow", 0.8F, 0.8F / (c.nextFloat() * 0.4F + 0.8F));
 /*  38 */         var2.addEntity(new EntityGrimArrow(var2, var3));
 /*  39 */         var5--;
 /*  40 */         var6--;
-/*     */       }
 /*     */     }
 /*     */   }
 /*     */ 
@@ -101,7 +100,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.ItemGrimarchRing
  * JD-Core Version:    0.6.2
  */

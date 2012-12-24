@@ -467,7 +467,7 @@
 /* 520 */             this.items[var1] = this.items[(var1 - 1)].cloneItemStack();
 /* 521 */             this.items[(var1 - 1)] = null;
 /*     */           }
-/*     */         }
+/*     */         
 /*     */ 
 /* 525 */         this.woftFactor = (EEBase.getPedestalFactor(this.world) * EEBase.getPlayerWatchFactor());
 /*     */ 
@@ -510,9 +510,10 @@
 /*     */ 
 /* 561 */           sendAllPackets(getFactoredProduction());
 /*     */         }
-/*     */       }
-/*     */     }
-/*     */   }
+}
+/*     */       
+/*     */     
+/*     */   } } }
 /*     */ 
 /*     */   private int getKleinPoints(ItemStack var1)
 /*     */   {
@@ -709,7 +710,7 @@
 /* 766 */       return true;
 /*     */     }
 /*     */ 
-/* 770 */     for (var2 = 1; var2 <= this.items.length - 3; var2++)
+/* 770 */     for (int var2 = 1; var2 <= this.items.length - 3; var2++)
 /*     */     {
 /* 772 */       if (this.items[var2] == null)
 /*     */       {
@@ -895,7 +896,7 @@
 /*     */   }
 /*     */ }
 
-/* Location:           E:\Downloads\tekkit_24122012\mods\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
+/* Location:           E:\Downloads\EE2ServerV1.4.6.5-bukkit-mcpc-1.2.5-r5\
  * Qualified Name:     ee.TileCollector
  * JD-Core Version:    0.6.2
  */
